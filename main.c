@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 
 int main() {
     printf("\nSIMPLE CALCULATOR");
@@ -8,5 +9,10 @@ int main() {
     printf("\n3. Exit");
 
     printf("\nSelect option [1-3]: ");
+
+
+    uint8_t option;
+    scanf("%hhu", &option);
+    printf("\nMode selected: %hhu", option);
     return 0;
 }
