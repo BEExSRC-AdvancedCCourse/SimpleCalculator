@@ -14,5 +14,30 @@ int main() {
     uint8_t option;
     scanf("%hhu", &option);
     printf("\nMode selected: %hhu", option);
+
+    if (option == 1) {
+        uint32_t first_number, second_number;
+        char operand;
+
+        printf("\nEnter first number: ");
+        scanf("%u", &first_number);
+
+        printf("\nEnter operand [+,-,*,/]: ");
+        while (getchar() != '\n');
+        scanf("%c", &operand);
+
+        printf("\nEnter second number: ");
+        scanf("%u", &second_number);
+
+        switch (operand)
+        {
+        case '+':
+            printf("\n%u + %u = %u", first_number, second_number, first_number + second_number);
+            break;
+        
+        default:
+            break;
+        }
+    }
     return 0;
 }
