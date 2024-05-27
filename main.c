@@ -51,5 +51,16 @@ int main() {
             break;
         }
     }
+    else if (option == 2) {
+        uint32_t first_number, second_number;
+
+        printf("\nEnter first number: ");
+        scanf("%u", &first_number);
+        printf("First number: %u\n", first_number);
+
+        printf("\nEnter second number: ");
+        scanf("%u", &second_number); 
+        printf("Second number: %u", second_number);
+    }
     return 0;
 }
