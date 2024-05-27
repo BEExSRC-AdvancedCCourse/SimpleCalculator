@@ -10,12 +10,16 @@ int main() {
         printf("\n2. GCD");
         printf("\n3. Exit");
 
-        printf("\nSelect option [1-3]: ");
+        
 
+        uint8_t option = 0;
+        do {
+            printf("\nSelect option [1-3]: ");
+            scanf("%hhu", &option);
+            while (getchar() != '\n');
+            printf("\nMode selected: %hhu", option);
+        } while(!(option >= 1 && option <= 3));
 
-        uint8_t option;
-        scanf("%hhu", &option);
-        printf("\nMode selected: %hhu", option);
 
         if (option == 1) {
             uint32_t first_number, second_number;
