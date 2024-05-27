@@ -10,3 +10,15 @@
 - Output: UCLN
 ### 1.3. Exit
 - Thoát phần mềm
+
+## 2. Phiên bản
+
+### ***Phiên bản hiện tại: v1.0***
+- Tính năng
+    - Tính +,-,*,/
+    - Tính UCLN
+    - Thoát
+- Bugs
+    - Không xử lý được input lạ từ người dùng
+    - Chưa thể hiện logic code trong mã nguồn
+    - Mã nguồn chưa được sắp xếp có hệ thống
