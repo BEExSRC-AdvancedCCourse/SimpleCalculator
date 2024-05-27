@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 int main() {
     printf("\nSIMPLE CALCULATOR");
@@ -71,5 +72,10 @@ int main() {
 
         printf("\nGCD(%u, %u) = %u", first_number, second_number, gcd);
     }
+    else if (option == 3) {
+        printf("\nExit program!");
+        exit(0);
+    }
+
     return 0;
 }
