@@ -17,19 +17,19 @@ int main() {
 
     if (option == 1) {
         uint32_t first_number, second_number;
-        char operand;
+        char operator;
 
         printf("\nEnter first number: ");
         scanf("%u", &first_number);
 
-        printf("\nEnter operand [+,-,*,/]: ");
+        printf("\nEnter operator [+,-,*,/]: ");
         while (getchar() != '\n');
-        scanf("%c", &operand);
+        scanf("%c", &operator);
 
         printf("\nEnter second number: ");
         scanf("%u", &second_number);
 
-        switch (operand)
+        switch (operator)
         {
         case '+':
             printf("\n%u + %u = %u", first_number, second_number, first_number + second_number);
