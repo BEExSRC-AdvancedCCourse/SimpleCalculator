@@ -15,9 +15,9 @@ int main() {
         uint8_t option = 0;
         do {
             printf("\nSelect option [1-3]: ");
-            scanf("%hhu", &option);
+            scanf("%u", &option);
             while (getchar() != '\n');
-            printf("\nMode selected: %hhu", option);
+            printf("\nMode selected: %u", option);
         } while(!(option >= 1 && option <= 3));
 
 
