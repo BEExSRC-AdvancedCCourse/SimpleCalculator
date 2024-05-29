@@ -16,6 +16,18 @@ uint32_t get_input_number(char* input_prompt, char* confirm_message) {
     return number;
 }
 
+uint8_t get_input_mode(char* input_prompt, char* confirm_message) {
+    uint32_t option = 0;
+    do {
+        printf("\n%s: ", input_prompt);
+        scanf("%u", &option);
+        while (getchar() != '\n');
+        printf("\n%s: %u",confirm_message, option);
+    } while(!(option >= 1 && option <= 3));
+
+    return ((uint8_t) option);
+}
+
 int main() {
     while(1) {
         printf("\nSIMPLE CALCULATOR");
@@ -26,14 +38,7 @@ int main() {
 
         
 
-        uint8_t option = 0;
-        do {
-            printf("\nSelect option [1-3]: ");
-            scanf("%u", &option);
-            while (getchar() != '\n');
-            printf("\nMode selected: %u", option);
-        } while(!(option >= 1 && option <= 3));
-
+        uint8_t option = get_input_mode("Select mode [1-3]", "Mode selected");
 
         if (option == 1) {
             uint32_t first_number, second_number;
