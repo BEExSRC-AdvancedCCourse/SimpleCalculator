@@ -2,6 +2,20 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+uint32_t get_input_number(char* input_prompt, char* confirm_message) {
+    uint8_t scanned_count = 0;
+    uint32_t number;
+
+    do {
+        printf("\n%s: ", input_prompt);
+        scanned_count = scanf("%u", &number);
+        while (getchar() != '\n');
+        printf("\n%s: %u", confirm_message, number);
+    } while(!(scanned_count == 1)); 
+
+    return number;
+}
+
 int main() {
     while(1) {
         printf("\nSIMPLE CALCULATOR");
@@ -25,15 +39,13 @@ int main() {
             uint32_t first_number, second_number;
             char operator;
 
-            printf("\nEnter first number: ");
-            scanf("%u", &first_number);
+            first_number = get_input_number("Enter first number", "Number received");
 
             printf("\nEnter operator [+,-,*,/]: ");
-            while (getchar() != '\n');
             scanf("%c", &operator);
+            while (getchar() != '\n');
 
-            printf("\nEnter second number: ");
-            scanf("%u", &second_number);
+            second_number = get_input_number("Enter second number", "Number received");
 
             switch (operator)
             {
