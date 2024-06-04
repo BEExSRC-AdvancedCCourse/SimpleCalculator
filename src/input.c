@@ -9,7 +9,7 @@ uint32_t INPUT_GetNumber(char* input_prompt, char* confirm_message) {
 
     do {
         printf("\n%s: ", input_prompt);
-        scanned_count = scanf("%u", &number); // Read the inputted number from the user
+        scanned_count = (uint8_t) scanf("%u", &number); // Read the inputted number from the user
         while (getchar() != '\n'); // Clear the input buffer. Input buffer always end with Enter ('\n')
         printf("\n%s: %u", confirm_message, number); // Display the confirmed number to the user
     } while(!(scanned_count == 1)); // Repeat until a valid number is inputted
